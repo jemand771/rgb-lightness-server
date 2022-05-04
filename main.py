@@ -53,7 +53,9 @@ def perform_operation():
 def get_hosted_image(identifier):
     try:
         retval, buffer = cv2.imencode('.png', IMAGES[identifier])
-        return make_response(buffer.tobytes())
+        resp = make_response(buffer.tobytes())
+        resp.mimetype = "image/png"
+        return resp
     except KeyError:
         abort(404)
 

@@ -16,8 +16,8 @@
         {% for name, img_url in output_images.items() %}
             <tr>
             <td>{{ name }}</td>
-            <td><img src="{{ img_url }}-0" width="500"/></td>
-            <td><img src="{{ img_url }}-1" width="500"/></td>
+            <td><a target="_blank" href="{{ img_url }}-0"><img src="{{ img_url }}-0" width="500"/></a></td>
+            <td><a target="_blank" href="{{ img_url }}-1"><img src="{{ img_url }}-1" width="500"/></a></td>
             </tr>
         {% endfor %}
         </tbody>
