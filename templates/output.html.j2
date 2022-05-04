@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>jojojojojo</title>
+    </head>
+    <body>
+        <h1>epic results</h1>
+        <table>
+        <thead>
+            <tr>
+                <td>name</td>
+                <td>unclipped</td>
+                <td>clipped (0 <= x <= 255)</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for name, img_url in output_images.items() %}
+            <tr>
+            <td>{{ name }}</td>
+            <td><img src="{{ img_url }}-0" width="500"/></td>
+            <td><img src="{{ img_url }}-1" width="500"/></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+    </body>
+</html>
